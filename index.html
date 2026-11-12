@@ -118,6 +118,241 @@
     }
     @media (max-width: 390px) { .skills-grid { grid-template-columns: 1fr; } }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } }
+    
+/* MACWITZER AQUINO — EDITORIAL PORTFOLIO REDESIGN */
+:root {
+  --bg: #f3f0e8;
+  --surface: #e8e4d9;
+  --surface-2: #244b3c;
+  --text: #172b25;
+  --muted: #68766d;
+  --line: rgba(23,43,37,.18);
+  --accent: #e36b3f;
+  --accent-2: #d5e2a5;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.topbar {
+  background: rgba(243,240,232,.96);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  font-family: Georgia, serif;
+  font-size: 1.4rem;
+  letter-spacing: -.06em;
+}
+
+.brand span { color: var(--accent); }
+
+.nav-links {
+  text-transform: uppercase;
+  font-size: .78rem;
+  letter-spacing: .1em;
+  font-weight: 800;
+}
+
+.hero {
+  padding-top: 110px;
+  padding-bottom: 95px;
+  gap: 55px;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero::before {
+  content: "INDEPENDENT DEVELOPER / PORTFOLIO 2026";
+  color: var(--muted);
+  letter-spacing: .16em;
+  font-size: .68rem;
+}
+
+h1, .section-head h2, .project-body h3,
+.experience-card h3, .education h3,
+.contact-wrap h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  letter-spacing: -.055em;
+}
+
+h1 {
+  font-size: clamp(3.2rem, 7vw, 6.5rem);
+  line-height: .98;
+}
+
+h1 .accent {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.eyebrow {
+  color: var(--accent);
+  letter-spacing: .18em;
+  font-weight: 900;
+}
+
+.profile-card {
+  background: var(--surface-2);
+  color: #fff;
+  border-radius: 3px;
+  padding: 20px;
+  transform: rotate(1deg);
+  box-shadow: 13px 13px 0 var(--accent-2);
+}
+
+.avatar {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center 25%;
+  border-radius: 2px;
+  border: 0;
+}
+
+.profile-card p,
+.profile-meta {
+  color: #d5dfd4;
+}
+
+.profile-meta strong { color: var(--accent-2); }
+.profile-card .text-link { color: white; }
+
+.btn {
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  font-size: .8rem;
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--surface-2);
+  border-color: var(--surface-2);
+}
+
+.btn-secondary {
+  border-color: var(--text);
+  color: var(--text);
+  background: transparent;
+}
+
+section {
+  padding-top: 85px;
+  padding-bottom: 85px;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-head h2 {
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  line-height: 1;
+}
+
+.panel {
+  background: var(--surface);
+  border-radius: 2px;
+  border: 1px solid var(--line);
+}
+
+.focus-list {
+  background: var(--surface-2);
+  color: white;
+}
+
+.check {
+  background: var(--accent-2);
+  color: var(--surface-2);
+  border-radius: 50%;
+}
+
+.skills-grid {
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.skill-card {
+  background: transparent;
+  border: 0;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+}
+
+.tag {
+  background: transparent;
+  color: var(--surface-2);
+  border: 1px solid rgba(36,75,60,.35);
+  border-radius: 2px;
+}
+
+.project-card {
+  background: var(--surface);
+  border-radius: 2px;
+  border: 1px solid var(--line);
+  transition: transform .25s, box-shadow .25s;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 8px 8px 0 var(--accent-2);
+}
+
+.project-visual {
+  background: var(--surface-2);
+  border-radius: 0;
+}
+
+.project-visual svg { stroke: var(--accent-2); }
+
+.project-body h3,
+.experience-card h3 {
+  font-size: 1.35rem;
+}
+
+.experience-card {
+  background: transparent;
+  border-radius: 0;
+}
+
+.experience-card .number { color: var(--accent); }
+
+.education {
+  background: var(--accent-2);
+  border: 0;
+  border-radius: 2px;
+}
+
+.degree-mark {
+  background: var(--surface-2);
+  color: var(--accent-2);
+}
+
+.contact-wrap {
+  background: var(--surface-2);
+  color: white;
+  border-radius: 2px;
+}
+
+.contact-wrap p { color: #d5dfd4; }
+
+footer { color: var(--muted); }
+
+@media (max-width: 680px) {
+  .hero { padding-top: 85px; }
+  .profile-card { transform: none; }
+  .avatar { height: 320px; }
+  section { padding-top: 60px; padding-bottom: 60px; }
+}
+    
   </style>
 </head>
 <body>
