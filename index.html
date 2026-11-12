@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional developer portfolio">
+  <title>Developer Portfolio | Your Name</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b1120;
+      color: #e5e7eb;
+      line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #0b1120ee;
+      border-bottom: 1px solid #263249;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo { color: #60a5fa; font-size: 21px; font-weight: bold; }
+    nav { display: flex; gap: 22px; flex-wrap: wrap; }
+    nav a { color: #cbd5e1; font-size: 14px; }
+    nav a:hover { color: #60a5fa; }
+    section { padding: 85px 8%; }
+    .hero {
+      min-height: 530px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .tag { color: #60a5fa; font-weight: bold; }
+    h1 { font-size: clamp(38px, 7vw, 65px); line-height: 1.15; margin: 18px 0; }
+    h1 span, h2 span { color: #60a5fa; }
+    .intro { color: #aab7ca; max-width: 650px; font-size: 18px; }
+    .actions { display: flex; gap: 14px; margin-top: 30px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 7px;
+      background: #2563eb;
+      color: white;
+      font-weight: bold;
+    }
+    .btn.outline { background: transparent; border: 1px solid #64748b; }
+    h2 { font-size: 34px; margin-bottom: 25px; }
+    .muted { color: #aab7ca; max-width: 800px; }
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+    .card {
+      padding: 23px;
+      background: #141f33;
+      border: 1px solid #293750;
+      border-radius: 12px;
+    }
+    .card h3 { color: #60a5fa; margin-bottom: 10px; }
+    .card p { color: #aab7ca; font-size: 14px; }
+    .project-link { display: inline-block; color: #60a5fa; margin-top: 15px; }
+    .contact-links { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 22px; }
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #94a3b8;
+      border-top: 1px solid #263249;
+    }
+    @media(max-width: 650px) {
+      header { align-items: flex-start; gap: 15px; flex-direction: column; }
+      nav { gap: 14px; }
+      section { padding: 65px 7%; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="#">MY.PORTFOLIO</a>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <p class="tag">HELLO, WELCOME TO MY PORTFOLIO</p>
+  <h1>Hi, I'm <span>Your Name</span><br>Developer</h1>
+  <p class="intro">
+    I am a passionate developer interested in creating
+    useful, modern, and efficient software applications
+    and web solutions.
+  </p>
+  <div class="actions">
+    <a class="btn" href="#projects">Explore My Projects</a>
+    <a class="btn outline" href="#contact">Contact Me</a>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About <span>Me</span></h2>
+  <p class="muted">
+    I enjoy solving problems through technology and
+    developing applications that improve productivity
+    and simplify everyday tasks. I continuously learn
+    new technologies and improve my programming skills.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>Technical <span>Skills</span></h2>
+  <div class="skills">
+    <div class="card"><h3>Frontend</h3><p>HTML, CSS, JavaScript</p></div>
+    <div class="card"><h3>Backend</h3><p>PHP, Python, Node.js</p></div>
+    <div class="card"><h3>Database</h3><p>MySQL, SQL</p></div>
+    <div class="card"><h3>Tools</h3><p>Git, GitHub, VS Code</p></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>My <span>Projects</span></h2>
+  <p class="muted">A selection of my development projects.</p>
+  <div class="projects">
+    <div class="card">
+      <h3>CRUD Management System</h3>
+      <p>A web application for creating, viewing, editing, and deleting records.</p>
+      <a class="project-link" href="#">Project Details →</a>
+    </div>
+    <div class="card">
+      <h3>Inventory System</h3>
+      <p>A system concept for tracking products and inventory records.</p>
+      <a class="project-link" href="#">Project Details →</a>
+    </div>
+    <div class="card">
+      <h3>Productivity Dashboard</h3>
+      <p>A dashboard concept for organizing information and tasks.</p>
+      <a class="project-link" href="#">Project Details →</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Let's <span>Connect</span></h2>
+  <p class="muted">
+    Interested in working together? Feel free to contact me.
+  </p>
+  <div class="contact-links">
+    <a class="btn" href="mailto:YOUR_EMAIL@example.com">Email Me</a>
+    <a class="btn outline" href="https://github.com/katzbelgur-a11y" target="_blank">GitHub Profile</a>
+  </div>
+</section>
+
+<footer>
+  © <span id="year"></span> Your Name. All Rights Reserved.
+</footer>
+
+<script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
